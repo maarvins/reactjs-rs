@@ -16,7 +16,7 @@ export function RepositoryList() {
   useEffect(() => {
     fetch("https://api.github.com/users/maarvins/repos") //buscar os valores do OBJETO dentro da api
       .then((response) => response.json()) //quando eu obter os valores da api, vou transformar em um JSON
-      .then((data) => console.log(data)) //depois da conversão para json, terei os dados do repositório
+      .then((data) => setRepositories(data)) //depois da conversão para json, terei os dados do repositório e guardo eles no meu estado setRepositories
   }, [])
 
   return (
