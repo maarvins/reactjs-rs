@@ -17,9 +17,11 @@ export function RepositoryList() {
     <section className="repository-list">
       <h1>Lista de repositórios</h1>
       <ul>
-        <RepositoryItem repository={repository} />
-        <RepositoryItem repository={repository} />
-        <RepositoryItem repository={repository} />
+        {repositories.map((repository) => {
+          return (
+            <RepositoryItem repository={repository} key={repository.name} />
+          ) //passando um map dentro do array repositories pra retornar o qualquer valor do objeto
+        })}
       </ul>
     </section>
   )
