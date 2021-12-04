@@ -2,4 +2,4 @@ const user = {
   name: "Diego"
 }
 
-console.log(user.address.street)
+console.log(user.address?.street)
